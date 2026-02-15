@@ -1,0 +1,9 @@
+{
+  "logging": {
+    "file": "./logs/dry_run.log",
+    "level": "INFO"
+  },
+  "report": {
+    "report_path": "./logs/dry_run_report.json"
+  }
+}
