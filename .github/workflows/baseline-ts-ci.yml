@@ -2,9 +2,9 @@ name: baseline-ts-ci
 
 on:
   push:
-    branches: ['master', 'main']
+    branches: ['main']
   pull_request:
-    branches: ['master', 'main']
+    branches: ['main']
 
 jobs:
   baseline-ts:
@@ -13,8 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: npm
+          node-version: '22'
       - name: Install dependencies
         run: |
           if [ -f package.json ]; then
@@ -39,11 +38,7 @@ jobs:
       - name: Test
         run: |
           if [ -f package.json ] && node -e "const s=require('./package.json').scripts||{}; process.exit(s.test ? 0 : 1)"; then
-            if [ -n "${STANTON_TIMES_DISCORD_WEBHOOK_URL}" ] || [ -f "${STANTON_TIMES_DISCORD_WEBHOOK_FILE:-}" ]; then
-              npm test
-            else
-              echo "Skipping test (no Discord webhook configured in CI)."
-            fi
+            npm test
           else
             echo "Skipping test (script absent)."
           fi

@@ -1,10 +1,9 @@
 # stanton-times
 
 > Star Citizen newsroom pipeline for source monitoring, clustering, and staged publishing.
-> Status: `active`
+> Status: `Production` (actively maintained)
 
-![CI](https://img.shields.io/github/actions/workflow/status/zachyzissou/stanton-times/baseline-ts-ci.yml)
-![Coverage](https://img.shields.io/badge/coverage-70%25-brightgreen)
+![CI](https://github.com/zachyzissou/stanton-times/actions/workflows/baseline-ts-ci.yml/badge.svg?branch=main)
 ![License](https://img.shields.io/github/license/zachyzissou/stanton-times)
 ![Security](https://img.shields.io/badge/security-SECURITY.md-green)
 
@@ -63,7 +62,6 @@ npm test
 npm test
 ```
 
-Coverage goal: 70% minimum for touched areas.
 
 ## Security
 - Report issues via `SECURITY.md`.
@@ -71,13 +69,13 @@ Coverage goal: 70% minimum for touched areas.
 - Protect default branch and require review before merge.
 
 ## Contributing
-1. Branch from default branch (`master`)
+1. Branch from default branch (`main`)
 2. Run checks in this repo and include outputs in PR
 3. Keep PRs focused and add rationale for behavioral changes
 4. Request review and obtain approval before merge
 
 ## Deployment / runbook
-- Deployment target: default branch ` master `
+- Deployment target: default branch `master`
 - Rollback: revert commit and redeploy previous release/tag
 - Emergency: pause workflows and disable risky automation if needed
 
