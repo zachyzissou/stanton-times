@@ -24,28 +24,28 @@ jobs:
           fi
       - name: Lint
         run: |
-          if npm run --silent lint --if-present >/dev/null 2>&1; then
+          if [ -f package.json ] && node -e "const s=require('./package.json').scripts||{}; process.exit(s.lint ? 0 : 1)"; then
             npm run lint
           else
             echo "Skipping lint (script absent)."
           fi
       - name: Type check
         run: |
-          if npm run --silent typecheck --if-present >/dev/null 2>&1; then
+          if [ -f package.json ] && node -e "const s=require('./package.json').scripts||{}; process.exit(s.typecheck ? 0 : 1)"; then
             npm run typecheck
           else
             echo "Skipping typecheck (script absent)."
           fi
       - name: Test
         run: |
-          if npm run --silent test --if-present >/dev/null 2>&1; then
+          if [ -f package.json ] && node -e "const s=require('./package.json').scripts||{}; process.exit(s.test ? 0 : 1)"; then
             npm test
           else
             echo "Skipping test (script absent)."
           fi
       - name: Build
         run: |
-          if npm run --silent build --if-present >/dev/null 2>&1; then
+          if [ -f package.json ] && node -e "const s=require('./package.json').scripts||{}; process.exit(s.build ? 0 : 1)"; then
             npm run build
           else
             echo "Skipping build (script absent)."
