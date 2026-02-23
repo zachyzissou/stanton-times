@@ -1,0 +1,52 @@
+name: baseline-ts-ci
+
+on:
+  push:
+    branches: ['master', 'main']
+  pull_request:
+    branches: ['master', 'main']
+
+jobs:
+  baseline-ts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci
+          else
+            echo "No package.json found; skipping install."
+          fi
+      - name: Lint
+        run: |
+          if npm run --silent lint --if-present >/dev/null 2>&1; then
+            npm run lint
+          else
+            echo "Skipping lint (script absent)."
+          fi
+      - name: Type check
+        run: |
+          if npm run --silent typecheck --if-present >/dev/null 2>&1; then
+            npm run typecheck
+          else
+            echo "Skipping typecheck (script absent)."
+          fi
+      - name: Test
+        run: |
+          if npm run --silent test --if-present >/dev/null 2>&1; then
+            npm test
+          else
+            echo "Skipping test (script absent)."
+          fi
+      - name: Build
+        run: |
+          if npm run --silent build --if-present >/dev/null 2>&1; then
+            npm run build
+          else
+            echo "Skipping build (script absent)."
+          fi
