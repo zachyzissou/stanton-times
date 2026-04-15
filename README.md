@@ -1,3 +1,6 @@
+> **License Notice**
+> This repository is source-visible only. No copying, modification, redistribution, deployment, or commercial use is permitted without prior written permission from Zach Gonser. See `LICENSE` for details.
+
 # stanton-times
 
 > Star Citizen newsroom pipeline for source monitoring, clustering, and staged publishing.
