@@ -1,10 +1,13 @@
+> **License Notice**
+> This repository is source-visible only. You may view, clone, and fork it solely for personal reference, but copying for redistribution, modification, deployment, or commercial use is not permitted without prior written permission from Zach Gonser. See `LICENSE` for details.
+
 # stanton-times
 
 > Star Citizen newsroom pipeline for source monitoring, clustering, and staged publishing.
 > Status: `Production` (actively maintained)
 
 ![CI](https://github.com/zachyzissou/stanton-times/actions/workflows/baseline-ts-ci.yml/badge.svg?branch=main)
-![License](https://img.shields.io/github/license/zachyzissou/stanton-times)
+[![License: Source-Visible](https://img.shields.io/badge/license-source--visible-red)](LICENSE)
 ![Security](https://img.shields.io/badge/security-SECURITY.md-green)
 
 ## Overview
@@ -102,7 +105,7 @@ npm test
 - Baseline governance, deep README, and CI workflow added.
 
 ## License & contact
-- License: Project-specific baseline
+- License: SlurpNet Source-Visible License v1.0 (`LICENSE`)
 - Contact: @zachyzissou / Security: see SECURITY.md
 
 _Last updated: 2026-02-23_
