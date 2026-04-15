@@ -16,8 +16,14 @@ Without prior written permission from Zach Gonser, you may not:
 - use the code to provide hosted or managed services,
 - remove or alter copyright, attribution, or license notices.
 
+## Third-party components
+This license applies only to original works in this repository that are owned by Zach Gonser.
+Third-party dependencies, vendored code, and other third-party materials included in this repository remain subject to their respective upstream licenses and terms.
+
 ## Contributions
-Unless explicitly agreed otherwise in writing, any contribution, patch, pull request, or suggestion submitted for this repository may be rejected and does not grant you any rights to this codebase.
+External contributions may be accepted or rejected at the sole discretion of Zach Gonser.
+By submitting a contribution, patch, pull request, or suggestion, you grant Zach Gonser a perpetual, worldwide, non-exclusive, irrevocable, royalty-free license to use, reproduce, modify, distribute, sublicense, and relicense that submission as part of this project and related works.
+Submitting a contribution does not grant you any ownership rights in this codebase or any rights beyond those expressly granted in this license.
 
 ## Trademark and branding
 No trademark, service mark, trade name, logo, or brand feature license is granted.
